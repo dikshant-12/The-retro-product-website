@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is home page of my project">
+    <meta name="Robots" content="noindex, nofollow">
+    <title>HOME</title>
+    <script src="main.js"></script>
+    <script src="js/header.js" type="text/javascript" defer></script>
+    <script src="js/footer.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+   </head>
+    <body>
+     <!--global header-->
+    <header-component></header-component>
+  <!--main section-->
+  <div class="container">
+    <div class="content">
+
+      <div class="slideshow-container">
+      <div class="mySlides fade">
+<!-- adding a image\ -->
+         <img src="images/2.jpg" width="400" height="500" alt="product">
+
+         </div>
+         <div class="mySlides fade">
+
+            <img src="images/5.jpg" width="400" height="500" alt="product">
+
+         </div>
+         <div class="mySlides fade">
+
+            <img src="images/8.jpg" width="400" height="500" alt="product">
+
+         </div>
+         <!-- going backward -->
+         <a class="prev" onclick="plusSlides(-1)">❮</a>
+         <!-- for going forwrd -->
+         <a class="next" onclick="plusSlides(1)">❯</a>
+   </div>
+   <br>
+   <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+   </div>
+       <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+
+                <marquee><h1 class="text-big">THE AMIGA VARIANTS</h1></marquee>
+                <p class="text-small">
+                   The Amiga 1000 was released in July 1985, but production problems kept it from becoming widely available until early 1986. 
+                   The best-selling model, the Amiga 500, was introduced in 1987 along with the more expandable Amiga 2000. 
+                   The Amiga 3000 was introduced in 1990, followed by the Amiga 500 Plus, and Amiga 600 in March 1992. Finally, 
+                   the Amiga 1200 and Amiga 4000 were released in late 1992. 
+                   The Amiga line sold an estimated 4.85 million units.
+                </p>
+ 
+</div>
+        </div>
+    </section> 
+           
+  
+<br/>
+         
+    </div>
+  </div>
+     <!--global footer-->
+   <footer-component></footer-component>
+
+   <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+         showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+         showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+      }
+   </script>
+</body>
+</html>
+<!-- refrence-https://www.w3schools.com/
+ reference-https://www.codewithharry.com/
+ material reference-https://en.m.wikipedia.org/wiki/Category:Products_introduced_in_1990 -->
+
